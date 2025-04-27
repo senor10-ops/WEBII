@@ -1,6 +1,6 @@
 <?php
-$cars = array ["Volvo", "BMW", "Toyota"];
-echo $cars[1];
+$cars = array ("Volvo", "BMW", "Toyota");
+echo $c1ars[1];
 echo $cars[2];
 
 
