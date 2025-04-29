@@ -9,7 +9,7 @@ include("databaseconnection.php");
     </head>
     <body>
         <form action="" method="post">
-            <h1>Fakebook</h1>
+            <h1>Welcome</h1>
             Username: <input type="text" name="username">
             <br>
             Password: <input type="password" name="password">
