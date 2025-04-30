@@ -5,7 +5,7 @@ include("databaseconnection.php");
 
 <html>
     <head>
-        <title>Fakebook</title>
+        
     </head>
     <body>
         <form action="" method="post">
