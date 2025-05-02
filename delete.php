@@ -26,7 +26,7 @@ $password = "lagrandee ";
 
 $sql = "DELETE FROM users WHERE 
 user = '$username' AND 
-password = '$password'";
+passwosrd = '$password'";
 
  -->
 
