@@ -1,9 +1,12 @@
 <?php
 include "databaseconnection.php";
-$sql = "SELECT id,user FROM users";
+// $sql = "SELECT id,user FROM users WHERE id >5";
+// $sql = "SELECT *FROM users WHERE id >5"; 
 
+// $sql = "SELECT *FROM users ORDERBY id DESC";
+// $sql = "SELECTz
 $result = mysqli_query($conn, $sql);
-  if(mysqli_fetch_rows > 0){
+if (mysqli_num_rows($result)> 0){
     while($row = mysqli_fetch_assoc($result)){
         echo "id: " . $row["id"]. " - Name: " . $row["user"]. "<br>";
     }
@@ -12,6 +15,6 @@ $result = mysqli_query($conn, $sql);
 else{
     echo "0 results";
   }
-  mysqi_close($conn);
+  mysqli_close($conn);
 
 ?>
