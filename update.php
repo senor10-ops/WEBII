@@ -1,8 +1,8 @@
 <?php
 include("databaseconnection.php");
 
-$new_username = "messis";  
-$new_password = "ronaldos"; 
+$new_username = "nepal";  
+$new_password = "lagrandee"; 
 
 $sql = "UPDATE users 
         SET password = '$new_password' , user = '$new_username'

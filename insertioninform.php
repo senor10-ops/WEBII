@@ -5,7 +5,7 @@ include("databaseconnection.php");
 
 <html>
     <head>
-        <title>Fakebook</title>
+        
     </head>
     <body>
         <form action="" method="post">
@@ -16,6 +16,8 @@ include("databaseconnection.php");
             <br>
             <input type="submit" value="Submit">
         </form>
+</body>
+</html>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -31,13 +33,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO users (user, password) VALUES('$username', '$hash')";
 
         if (mysqli_query($conn, $sql)) {
-            echo "New record created successfully!";
+            $last_id = mysqli_insert_id($conn); // Get inserted row's ID
+            mysqli_close($conn);
+            header("Location: success.php?id=$last_id"); // Redirect to new page with ID
+            exit(); // Always exit after header
         } else {
             echo "Error: " . mysqli_error($conn);
+            mysqli_close($conn);
         }
     }
-    mysqli_close($conn);
 }
-?>
-    </body>
-</html>
+?> 
