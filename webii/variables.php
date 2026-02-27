@@ -1,4 +1,8 @@
 <?php
 $txt = "hello nepal";
-echo "I love $txt!";
+$ram = "hello china";
+echo "I love $txt";
+echo "<br>";
+echo "hello $ram";
 ?>
+

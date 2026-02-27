@@ -15,15 +15,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['myfile'])) {
     $filesname = $_FILES['myfile']['name']; //gets the original name of the file that the user uploaded and stores it in the variable $filesname.
     $tempname = $_FILES['myfile']['tmp_name'];
     $size = $_FILES['myfile']['size'];
-    $target_dir = "testing/";
+    $target_dir = "webs/";
     // $uploadOk = 1;
-
 
     if (move_uploaded_file($tempname, $target_dir . $filesname)) {
         echo "File uploaded successfully<br>";
     } else {
         echo "File upload failed<br>";
     }
+
 
     // Check if the file is a valid image type
     $ext = pathinfo($filesname, PATHINFO_EXTENSION);
@@ -51,7 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['myfile'])) {
         echo "Sorry, file already exists.<br>";
         $uploadOk = 0;
     }
-
 
 }
 

@@ -1,9 +1,16 @@
 <?php
-$isStudent = true;
+$age = 21;
 
-if($isStudent){
+if($age){
     echo "You are a student";
-} else {
+} 
+elseif($age > 18){
+    echo "You are an adult";
+}
+
+else {
     echo "You are not a student";
 }
 ?>
+
+//=>
